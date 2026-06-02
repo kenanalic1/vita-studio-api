@@ -1,0 +1,919 @@
+[
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AktivnostiController",
+    "Method": "GetAll",
+    "RelativePath": "api/aktivnosti",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AktivnostiController",
+    "Method": "Create",
+    "RelativePath": "api/aktivnosti",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.AktivnostCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AktivnostiController",
+    "Method": "Update",
+    "RelativePath": "api/aktivnosti/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.AktivnostCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AktivnostiController",
+    "Method": "Delete",
+    "RelativePath": "api/aktivnosti/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AuthController",
+    "Method": "HashLozinke",
+    "RelativePath": "api/Auth/hash-lozinke",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.RegisterClanDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.CheckInController",
+    "Method": "CheckIn",
+    "RelativePath": "api/checkin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.EvidencijaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.CheckInController",
+    "Method": "Undo",
+    "RelativePath": "api/checkin/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.CheckInController",
+    "Method": "Statistika",
+    "RelativePath": "api/checkin/statistika",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.CheckInController",
+    "Method": "GetLista",
+    "RelativePath": "api/checkin/termin/{terminId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "terminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClanarineController",
+    "Method": "GetAll",
+    "RelativePath": "api/clanarine",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClanarineController",
+    "Method": "Create",
+    "RelativePath": "api/clanarine",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.ClanarinaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClanarineController",
+    "Method": "GetByClan",
+    "RelativePath": "api/clanarine/clan/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClanarineController",
+    "Method": "Samoodabir",
+    "RelativePath": "api/clanarine/samoodabir",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.SamoodabirDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "GetAll",
+    "RelativePath": "api/Clanice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "search",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "Create",
+    "RelativePath": "api/Clanice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.ClanCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "GetById",
+    "RelativePath": "api/Clanice/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "Update",
+    "RelativePath": "api/Clanice/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.ClanUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "Delete",
+    "RelativePath": "api/Clanice/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "PromijeniLozinku",
+    "RelativePath": "api/Clanice/{id}/lozinka",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.LozinkaDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "Odbij",
+    "RelativePath": "api/Clanice/{id}/odbij",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "Odobri",
+    "RelativePath": "api/Clanice/{id}/odobri",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ClaniceController",
+    "Method": "GetPending",
+    "RelativePath": "api/Clanice/pending",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ListaCekanjaController",
+    "Method": "GetAll",
+    "RelativePath": "api/listacekanja",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "datum",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ListaCekanjaController",
+    "Method": "Pridruzi",
+    "RelativePath": "api/listacekanja",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.PridruziListiDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ListaCekanjaController",
+    "Method": "Ukloni",
+    "RelativePath": "api/listacekanja/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.ListaCekanjaController",
+    "Method": "GetMoje",
+    "RelativePath": "api/listacekanja/moje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.NotifikacijeController",
+    "Method": "Procitaj",
+    "RelativePath": "api/notifikacije/{id}/procitaj",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.NotifikacijeController",
+    "Method": "GetBroj",
+    "RelativePath": "api/notifikacije/broj",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.NotifikacijeController",
+    "Method": "GetMoje",
+    "RelativePath": "api/notifikacije/moje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.NotifikacijeController",
+    "Method": "ProcitajSve",
+    "RelativePath": "api/notifikacije/procitaj-sve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.PregledController",
+    "Method": "AdminPregled",
+    "RelativePath": "api/pregled/admin",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.PregledController",
+    "Method": "ClanPocetna",
+    "RelativePath": "api/pregled/clan/{clanId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clanId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.PregledController",
+    "Method": "Izvestaj",
+    "RelativePath": "api/pregled/izvestaji",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "meseci",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.PregledController",
+    "Method": "TrenerPregled",
+    "RelativePath": "api/pregled/trener/{trenerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "GetAll",
+    "RelativePath": "api/Rezervacije",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "status",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "datum",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "Rezervisi",
+    "RelativePath": "api/Rezervacije",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.RezervacijaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "Otkazi",
+    "RelativePath": "api/Rezervacije/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "AdminOtkazi",
+    "RelativePath": "api/Rezervacije/{id}/admin",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "Moje",
+    "RelativePath": "api/Rezervacije/moje",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.RezervacijeController",
+    "Method": "GetByTermin",
+    "RelativePath": "api/Rezervacije/termin/{terminId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "terminId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.SaleController",
+    "Method": "GetAll",
+    "RelativePath": "api/sale",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.SaleController",
+    "Method": "Create",
+    "RelativePath": "api/sale",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.SalaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.SaleController",
+    "Method": "Update",
+    "RelativePath": "api/sale/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.SalaCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.SaleController",
+    "Method": "Delete",
+    "RelativePath": "api/sale/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "GetByDatum",
+    "RelativePath": "api/Termini",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "datum",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "Create",
+    "RelativePath": "api/Termini",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.TerminCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "GetById",
+    "RelativePath": "api/Termini/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "Update",
+    "RelativePath": "api/Termini/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.TerminCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "Delete",
+    "RelativePath": "api/Termini/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "GetByNedelja",
+    "RelativePath": "api/Termini/nedelja",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ponedeljak",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TerminiController",
+    "Method": "GetByTrener",
+    "RelativePath": "api/Termini/trener/{trenerId}/nedelja",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trenerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ponedeljak",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "GetAll",
+    "RelativePath": "api/treneri",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "Create",
+    "RelativePath": "api/treneri",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.TrenerCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "GetById",
+    "RelativePath": "api/treneri/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "Update",
+    "RelativePath": "api/treneri/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "VitaStudio.Api.Dtos.TrenerCreateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "Delete",
+    "RelativePath": "api/treneri/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VitaStudio.Api.Controllers.TreneriController",
+    "Method": "GetUcesnice",
+    "RelativePath": "api/treneri/{id}/ucesnice",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
