@@ -19,11 +19,13 @@ public class AuthService : IAuthService
 {
     private readonly VitaStudioDbContext _db;
     private readonly IConfiguration _cfg;
+    private readonly INotifikacijaService _notif;
 
-    public AuthService(VitaStudioDbContext db, IConfiguration cfg)
+    public AuthService(VitaStudioDbContext db, IConfiguration cfg, INotifikacijaService notif)
     {
-        _db  = db;
-        _cfg = cfg;
+        _db    = db;
+        _cfg   = cfg;
+        _notif = notif;
     }
 
     public async Task<AuthResponseDto?> LoginAsync(LoginDto dto)
@@ -71,6 +73,11 @@ public class AuthService : IAuthService
         };
         _db.Clanovi.Add(clan);
         await _db.SaveChangesAsync();
+
+        var admini = await _db.Administratori.ToListAsync();
+        foreach (var admin in admini)
+            await _notif.KreirajAsync(admin.Id, "administrator",
+                $"Nova članica {clan.Ime} {clan.Prezime} se registrovala i čeka odobrenje.", "info");
     }
 
     private AuthResponseDto BuildResponse(int id, string ime, string prezime, string email, string uloga)

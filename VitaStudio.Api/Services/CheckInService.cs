@@ -119,7 +119,9 @@ public class CheckInService : ICheckInService
             .CountAsync(e => terminiDanas.Contains(e.TerminId));
         var otkazano = await _db.Rezervacije
             .CountAsync(r => terminiDanas.Contains(r.TerminId) && r.Status == "otkazana");
+        var promovisan = await _db.Rezervacije
+            .CountAsync(r => terminiDanas.Contains(r.TerminId) && r.PromovisanSaListe);
 
-        return new CheckInStatistikaDto(prijavljeno, stiglo, otkazano, 0);
+        return new CheckInStatistikaDto(prijavljeno, stiglo, otkazano, promovisan);
     }
 }

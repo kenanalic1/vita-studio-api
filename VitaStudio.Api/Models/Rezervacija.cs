@@ -10,6 +10,7 @@ public class Rezervacija
     [Column("status")] public string Status { get; set; } = "aktivna";
     [Column("clan_id")] public int ClanId { get; set; }
     [Column("termin_id")] public int TerminId { get; set; }
+    [Column("promovisan_sa_liste")] public bool PromovisanSaListe { get; set; } = false;
 
     public Clan Clan { get; set; } = null!;
     public Termin Termin { get; set; } = null!;
