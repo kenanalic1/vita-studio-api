@@ -134,7 +134,7 @@ public class TerminService : ITerminService
 
     public static TerminDto Map(Termin t) => new(
         t.Id, t.DatumVreme, t.Trajanje, t.MaxKapacitet,
-        t.Rezervacije.Count(r => r.Status == "aktivna"),
+        t.Rezervacije.Count(r => r.Status != "otkazana"),
         t.ListeCekanja.Count,
         t.AktivnostId, t.Aktivnost.Naziv, t.Aktivnost.TipAktivnosti,
         t.TrenerId, $"{t.Trener.Ime} {t.Trener.Prezime}",
