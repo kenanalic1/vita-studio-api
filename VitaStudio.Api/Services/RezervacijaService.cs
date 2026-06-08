@@ -81,7 +81,7 @@ public class RezervacijaService : IRezervacijaService
     public async Task<List<RezervacijaDto>> GetByTerminAsync(int terminId)
     {
         var rez = await _db.Rezervacije
-            .Where(r => r.TerminId == terminId && r.Status == "aktivna")
+            .Where(r => r.TerminId == terminId && r.Status != "otkazana")
             .Include(r => r.Clan)
             .Include(r => r.Termin).ThenInclude(t => t.Aktivnost)
             .Include(r => r.Termin).ThenInclude(t => t.Trener)
