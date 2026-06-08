@@ -135,12 +135,21 @@ public class RezervacijaService : IRezervacijaService
             throw new InvalidOperationException($"Termin je popunjen. Dodate ste na listu cekanja (pozicija {maxPoz + 1}).");
         }
 
-        var rez = new Rezervacija
+        var otkazana = await _db.Rezervacije
+            .FirstOrDefaultAsync(r => r.ClanId == clanId && r.TerminId == terminId && r.Status == "otkazana");
+
+        Rezervacija rez;
+        if (otkazana is not null)
         {
-            ClanId = clanId, TerminId = terminId,
-            Status = "aktivna", DatumRezervacije = DateTime.UtcNow
-        };
-        _db.Rezervacije.Add(rez);
+            otkazana.Status = "aktivna";
+            otkazana.DatumRezervacije = DateTime.UtcNow;
+            rez = otkazana;
+        }
+        else
+        {
+            rez = new Rezervacija { ClanId = clanId, TerminId = terminId, Status = "aktivna", DatumRezervacije = DateTime.UtcNow };
+            _db.Rezervacije.Add(rez);
+        }
         await _db.SaveChangesAsync();
 
         var clan = await _db.Clanovi.FindAsync(clanId);
