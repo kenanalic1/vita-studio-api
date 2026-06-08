@@ -109,7 +109,7 @@ public class RezervacijaService : IRezervacijaService
             throw new InvalidOperationException("Ne možete rezervisati termin koji je već prošao.");
 
         var existing = await _db.Rezervacije
-            .FirstOrDefaultAsync(r => r.ClanId == clanId && r.TerminId == terminId);
+            .FirstOrDefaultAsync(r => r.ClanId == clanId && r.TerminId == terminId && r.Status != "otkazana");
         if (existing is not null)
             throw new InvalidOperationException("Vec ste rezervisali ovaj termin.");
 
@@ -181,7 +181,8 @@ public class RezervacijaService : IRezervacijaService
         _db.Rezervacije.Add(new Rezervacija
         {
             ClanId = prvi.ClanId, TerminId = terminId,
-            Status = "aktivna", DatumRezervacije = DateTime.UtcNow
+            Status = "aktivna", DatumRezervacije = DateTime.UtcNow,
+            PromovisanSaListe = true
         });
         _db.ListeCekanja.Remove(prvi);
 
