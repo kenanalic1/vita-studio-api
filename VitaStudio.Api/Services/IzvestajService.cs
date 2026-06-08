@@ -138,13 +138,13 @@ public class IzvestajService : IIzvestajService
 
         var ucesniceDanas = 0;
         foreach (var t in terminiDanas)
-            ucesniceDanas += t.Rezervacije.Count(r => r.Status == "aktivna");
+            ucesniceDanas += t.Rezervacije.Count(r => r.Status != "otkazana");
 
         var terminiProsle = await _db.Termini
             .Include(t => t.Rezervacije)
             .Where(t => t.TrenerId == trenerId && t.DatumVreme >= proslaPocetak && t.DatumVreme < ponedeljak)
             .ToListAsync();
-        var ucesniceProslaNed = terminiProsle.Sum(t => t.Rezervacije.Count(r => r.Status == "aktivna"));
+        var ucesniceProslaNed = terminiProsle.Sum(t => t.Rezervacije.Count(r => r.Status != "otkazana"));
         var rast = ucesniceDanas - ucesniceProslaNed;
 
         double prosecna = 0;
@@ -152,12 +152,12 @@ public class IzvestajService : IIzvestajService
         {
             prosecna = terminiNedelje.Average(t =>
                 t.MaxKapacitet > 0
-                    ? (double)t.Rezervacije.Count(r => r.Status == "aktivna") / t.MaxKapacitet * 100
+                    ? (double)t.Rezervacije.Count(r => r.Status != "otkazana") / t.MaxKapacitet * 100
                     : 0);
         }
 
         var popunjeni = terminiNedelje.Count(t =>
-            t.Rezervacije.Count(r => r.Status == "aktivna") >= t.MaxKapacitet);
+            t.Rezervacije.Count(r => r.Status != "otkazana") >= t.MaxKapacitet);
 
         var ukupnoLista = terminiNedelje.Sum(t => t.ListeCekanja.Count);
         var terminiSaListom = terminiNedelje.Count(t => t.ListeCekanja.Any());
