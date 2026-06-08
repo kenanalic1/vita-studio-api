@@ -244,8 +244,18 @@ public class ClanarineController : ControllerBase
 
     [HttpGet]
     [Authorize(Roles = "administrator")]
-    public async Task<IActionResult> GetAll([FromQuery] string? status) =>
-        Ok(await _db.Clanarine
+    public async Task<IActionResult> GetAll([FromQuery] string? status)
+    {
+        var istekle = await _db.Clanarine
+            .Where(c => c.Status == "aktivna" && c.DatumIsteka < DateTime.UtcNow)
+            .ToListAsync();
+        if (istekle.Any())
+        {
+            foreach (var cl in istekle) cl.Status = "istekla";
+            await _db.SaveChangesAsync();
+        }
+
+        return Ok(await _db.Clanarine
             .Include(c => c.Clan)
             .Where(c => status == null || c.Status == status)
             .OrderByDescending(c => c.DatumPocetka)
@@ -254,6 +264,7 @@ public class ClanarineController : ControllerBase
                 c.DatumPocetka, c.DatumIsteka, c.Cena, c.Status,
                 c.ClanId, $"{c.Clan.Ime} {c.Clan.Prezime}"))
             .ToListAsync());
+    }
 
     [HttpGet("clan/{clanId}")]
     public async Task<IActionResult> GetByClan(int clanId) =>
