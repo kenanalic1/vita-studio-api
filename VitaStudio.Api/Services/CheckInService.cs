@@ -30,7 +30,7 @@ public class CheckInService : ICheckInService
     public async Task<List<CheckInListDto>> GetTerminListaAsync(int terminId)
     {
         var rezervacije = await _db.Rezervacije
-            .Where(r => r.TerminId == terminId && r.Status == "aktivna")
+            .Where(r => r.TerminId == terminId && r.Status != "otkazana")
             .Include(r => r.Clan)
                 .ThenInclude(c => c.Clanarine)
             .ToListAsync();
